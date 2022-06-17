@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:test_delivery_app/pages/login.dart';
+import 'package:test_delivery_app/utils/dimensions.dart';
+
+final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,11 +24,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      navigatorKey: navigatorKey,
       theme: ThemeData(
         fontFamily: GoogleFonts.inter().fontFamily,
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage()
+      home: Builder(builder: (context) {
+        SizeConfig.init(context);
+        return const LoginPage();
+      })
     );
   }
 }
