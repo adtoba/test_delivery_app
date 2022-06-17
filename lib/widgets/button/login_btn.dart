@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:test_delivery_app/pages/home.dart';
 import 'package:test_delivery_app/style/palette.dart';
 import 'package:test_delivery_app/style/textstyle.dart';
 import 'package:test_delivery_app/utils/dimensions.dart';
 import 'package:test_delivery_app/utils/extensions.dart';
+import 'package:test_delivery_app/utils/navigator.dart';
 
 
 class LoginButton extends StatelessWidget {
@@ -47,7 +49,9 @@ class LoginButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(52),
       ),
-      onPressed: () {},
+      onPressed: () {
+        push(const HomePage());
+      },
     );
   }
 }
