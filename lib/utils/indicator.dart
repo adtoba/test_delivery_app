@@ -43,7 +43,7 @@ class Indicator extends StatelessWidget {
               shape: BoxShape.circle,
               color: isCurrentPageSelected 
                 ? Palette.black 
-                : Palette.white
+                : const Color(0xffE5F0FC)
             ),
           ),
         ),

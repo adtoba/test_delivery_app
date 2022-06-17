@@ -13,7 +13,7 @@ class CustomStyles {
   );
 
   static TextStyle bold18 = TextStyle(
-    fontSize: config.sp(18),
+    fontSize: config.sp(17),
     fontWeight: FontWeight.w700,
     color: const Color(0xff092C4C)
   );
