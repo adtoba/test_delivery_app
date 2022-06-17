@@ -137,10 +137,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  SizedBox(width: config.sw(20),),
                   Lottie.asset(
                     "assets/biker.json",
-                    height: config.sh(130),
-                    width: config.sw(130),
+                    height: config.sh(150),
+                    width: config.sw(150),
                     alignment: Alignment.center,
                     fit: BoxFit.cover
                   ),
@@ -149,13 +150,15 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                       "You too can join our\nElite squad of E-bikers",
                       style: CustomStyles.normal14.copyWith(
+                        fontSize: config.sp(16),
                         color: const Color(0xff424242)
                       ),
                     ),
                   ),
-                  SizedBox(width: config.sw(20),),
+                  const SizedBox(width: 20),
                 ],
               ),
+              SizedBox(width: config.sw(10),),
             ],
           ),
           const TrackPackagePage()

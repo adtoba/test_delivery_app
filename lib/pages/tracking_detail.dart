@@ -151,7 +151,7 @@ class _TrackingDetailPageState extends State<TrackingDetailPage> {
                       leadingColor: Palette.loginBg,
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: config.sw(25)),
+                      padding: EdgeInsets.symmetric(horizontal: config.sw(28)),
                       child: Container(
                         height: config.sh(30),
                         width: 1,
@@ -165,7 +165,7 @@ class _TrackingDetailPageState extends State<TrackingDetailPage> {
                       trailing: "21.00 PM",
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: config.sw(25)),
+                      padding: EdgeInsets.symmetric(horizontal: config.sw(28)),
                       child: Container(
                         height: config.sh(30),
                         width: 1,
