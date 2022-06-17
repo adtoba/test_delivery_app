@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   );
 
   final PageController _pageController = PageController(
-    viewportFraction: 0.8,
+    viewportFraction: 0.75,
     keepPage: true,
     initialPage: 0
   );
@@ -211,7 +211,7 @@ class _CustomCarouselWidgetState extends State<CustomCarouselWidget> {
     final config = SizeConfig();
 
     return SizedBox(
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width / 1,
       child: PageView(
         controller: widget.pageController,
         scrollDirection: Axis.horizontal,
