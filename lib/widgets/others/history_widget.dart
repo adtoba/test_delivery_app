@@ -15,39 +15,50 @@ class HistoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final config = SizeConfig();
-    
-    return ListTile(
-      contentPadding: EdgeInsets.zero,
-      leading: Container(
-        height: config.sh(56),
-        width: config.sw(56),
-        alignment: Alignment.center,
-        child: Text("$leading", style: TextStyle(fontSize: config.sp(30)),),
-        padding: const EdgeInsets.all(2),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: leadingColor ?? const Color(0xffF1F6FB)
+
+    return Row(
+      children: [
+        Container(
+          height: config.sh(56),
+          width: config.sw(56),
+          alignment: Alignment.center,
+          child: Text("$leading", style: TextStyle(fontSize: config.sp(30)),),
+          padding: const EdgeInsets.all(2),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: leadingColor ?? const Color(0xffF1F6FB)
+          ),
         ),
-      ),
-      title: Text(
-        "$title",
-        style: CustomStyles.normal14.copyWith(
-          color: const Color(0xff1E3354),
-          fontWeight: FontWeight.w600
+        SizedBox(width: config.sw(20),),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "$title",
+                style: CustomStyles.normal14.copyWith(
+                  color: const Color(0xff1E3354),
+                  fontWeight: FontWeight.w600
+                ),
+              ),
+              SizedBox(height: config.sh(10)),
+              Text(
+                "$subtitle",
+                style: CustomStyles.normal14.copyWith(
+                  color: const Color(0xff7A809D)
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
-      subtitle: Text(
-        "$subtitle",
-        style: CustomStyles.normal14.copyWith(
-          color: const Color(0xff7A809D)
-        ),
-      ),
-      trailing: Text(
-        "$trailing",
-        style: CustomStyles.normal14.copyWith(
-          color: const Color(0xff7A809D)
-        ),
-      )
+        SizedBox(width: config.sw(20),),
+        Text(
+          "$trailing",
+          style: CustomStyles.normal14.copyWith(
+            color: const Color(0xff7A809D)
+          ),
+        )
+      ],
     );
   }
 }

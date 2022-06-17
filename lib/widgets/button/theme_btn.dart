@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:test_delivery_app/pages/home.dart';
 import 'package:test_delivery_app/style/palette.dart';
 import 'package:test_delivery_app/style/textstyle.dart';
 import 'package:test_delivery_app/utils/dimensions.dart';

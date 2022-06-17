@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         leadingWidth: config.sw(70),
         leading: Padding(
-          padding: EdgeInsets.symmetric(horizontal: config.sw(10)),
+          padding: EdgeInsets.symmetric(horizontal: config.sw(14)),
           child: CircleAvatar(
             backgroundImage: Image.asset(
               "person".png,
@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                   style: CustomStyles.bold18,
                 ),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 30),
               Expanded(
                 child: Align(
                   alignment: Alignment.centerLeft,
@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                       "Gotten your\nE-Bike yet?",
                       style: CustomStyles.normal14,
                     ),
-                    SizedBox(width: config.sw(27),),
+                    SizedBox(width: config.sw(50)),
                     Expanded(
                       child: ThemeButton(
                         text: "Your Orders",
@@ -133,36 +133,29 @@ class _HomePageState extends State<HomePage> {
                   color: Palette.loginBg,
                 ),
               ),
-              Container(
-                height: config.sh(109),
-                width: double.infinity,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Lottie.asset(
-                      "assets/biker.json",
-                      height: config.sh(160),
-                      width: config.sw(161),
-                      alignment: Alignment.centerLeft,
-                      fit: BoxFit.cover
-                    ),
-                    SizedBox(width: config.sw(20),),
-                    Expanded(
-                      child: Text(
-                        "You too can join our\nElite squad of E-bikers",
-                        style: CustomStyles.normal14.copyWith(
-                          color: const Color(0xff424242)
-                        ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Lottie.asset(
+                    "assets/biker.json",
+                    height: config.sh(130),
+                    width: config.sw(130),
+                    alignment: Alignment.center,
+                    fit: BoxFit.cover
+                  ),
+                  SizedBox(width: config.sw(20),),
+                  Expanded(
+                    child: Text(
+                      "You too can join our\nElite squad of E-bikers",
+                      style: CustomStyles.normal14.copyWith(
+                        color: const Color(0xff424242)
                       ),
                     ),
-                    SizedBox(width: config.sw(20),),
-                  ],
-                ),
-                decoration: const BoxDecoration(
-                  color: Palette.white,
-                ),
+                  ),
+                  SizedBox(width: config.sw(20),),
+                ],
               ),
-              SizedBox(height: config.sh(10)),
             ],
           ),
           const TrackPackagePage()
